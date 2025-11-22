@@ -1,5 +1,8 @@
 # University Management System - 2023
 
+## Academic Context
+This project was developed as part of the "Introduction to Database" course (2023).
+
 ## Project Overview
 
 This is a web-based University Management System designed to manage students, lecturers, courses, and their relationships. The system provides CRUD (Create, Read, Update, Delete) operations for various entities within a university database.
