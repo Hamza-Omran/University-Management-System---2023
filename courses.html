@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>University Management System</title>
+</head>
+<body>
+    <header>
+        <h1>University Management System</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Students</a></li>
+            <li><a href="lecturers.html">Lecturers</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="add_courses.html">Add Course to Student</a></li>
+            <li><a href="jss.html">Show Tables</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Courses</h2>
+        <div class="add-course">
+            <h3>Add Course</h3>
+            <form action="index.php" method="post">
+                <label for="course ID">Course ID:</label>
+                <input type="text" id="course ID" name="courseID" required>
+
+                <label for="startTime">Start Time:</label>
+                <input type="text" id="startTime" name="startTime" placeholder="HH:MM" required>
+
+                <label for="endTime">End Time:</label>
+                <input type="text" id="endTime" name="endTime" placeholder="HH:MM" required>
+
+                <label for="courseDay">Course Day:</label>
+                <input type="text" id="courseDay" name="courseDay" required>
+
+                <label for="lecturerID">lecturer ID:</label>
+                <input type="text" id="lecturerID" name="lecturerID" required>
+
+                <button type="submit" name="addCourse">Add</button>
+            </form>
+        </div>
+        <div class="add-course">
+
+            <h3>Delete Course</h3>
+            <form action="index.php" method="post">
+                <label for="course ID">Course ID:</label>
+                <input type="text" id="course ID" name="courseID" required>
+
+                <label for="lecturerID">lecturer ID:</label>
+                <input type="text" id="lecturerID" name="lecturerID" required>
+
+                <button type="submit" name="deleteCourse">Delete</button>
+            </form>
+        </div>
+        <div class="add-course">
+            <h3>Edit Course</h3>
+            <form action="index.php" method="post">
+                <label for="course ID">Course ID:</label>
+                <input type="text" id="course ID" name="courseID" required>
+
+                <label for="lecturerID">lecturer ID:</label>
+                <input type="text" id="lecturerID" name="lecturerID" required>
+
+                <label for="startTime">Start Time:</label>
+                <input type="text" id="startTime" name="startTime" placeholder="HH:MM" required>
+
+                <label for="endTime">End Time:</label>
+                <input type="text" id="endTime" name="endTime" placeholder="HH:MM" required>
+
+                <label for="courseDay">Course Day:</label>
+                <input type="text" id="courseDay" name="courseDay" required>
+
+                <button type="submit" name="editCourse">Edit</button>
+            </form>
+        </div>
+
+       
+    </section>
+
+</body>
+</html>

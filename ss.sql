@@ -1,0 +1,121 @@
+-- University table
+CREATE TABLE University (
+    UniversityID INT PRIMARY KEY,
+    UniversityName VARCHAR(255)
+);
+
+-- Collage table
+CREATE TABLE Collage (
+    CollageID INT PRIMARY KEY,
+    CollageName VARCHAR(255),
+    UniversityID INT,
+    FOREIGN KEY (UniversityID) REFERENCES University(UniversityID)
+);
+
+-- Lecturer table
+CREATE TABLE Lecturer (
+    LecturerID INT PRIMARY KEY,
+    Specialize VARCHAR(255),
+    LecturerName VARCHAR(255),
+    UniversityID INT,
+    FOREIGN KEY (UniversityID) REFERENCES University(UniversityID)
+);
+
+-- Department table
+CREATE TABLE Department (
+    DepartmentID INT PRIMARY KEY,
+    DepartmentName VARCHAR(255),
+    CollageID INT,
+    FOREIGN KEY (CollageID) REFERENCES Collage(CollageID)
+);
+
+-- Course table
+CREATE TABLE Course (
+    CourseID INT PRIMARY KEY,
+    CourseName VARCHAR(255),
+    CreditsHours INT,
+    DepartmentID INT,
+    FOREIGN KEY (DepartmentID) REFERENCES Department(DepartmentID)
+);
+
+-- Student table
+CREATE TABLE Student (
+    StudentID INT PRIMARY KEY,
+    StudentName VARCHAR(255),
+    Hours INT,
+    DepartmentID INT,
+    FOREIGN KEY (DepartmentID) REFERENCES Department(DepartmentID)
+);
+
+-- Student_Course table
+CREATE TABLE Student_Course (
+    Degree INT CHECK (Degree <= 100),
+    CourseID INT,
+    StudentID INT,
+    FOREIGN KEY (CourseID) REFERENCES Course(CourseID),
+    FOREIGN KEY (StudentID) REFERENCES Student(StudentID)
+);
+
+-- Course_Department table 
+CREATE TABLE Course_Department (
+    CourseDay VARCHAR(50), 
+    StartTime TIME, 
+    EndTime TIME, 
+    CourseID INT,
+    LecturerID INT,
+    FOREIGN KEY (CourseID) REFERENCES Course(CourseID),
+    FOREIGN KEY (LecturerID) REFERENCES Lecturer(LecturerID)
+);
+
+
+
+
+
+-- Insert data into University table
+INSERT INTO University (UniversityID, UniversityName)
+VALUES (2, 'Alexandria');
+
+-- Insert data into Collage table
+INSERT INTO Collage (CollageID, CollageName, UniversityID)
+VALUES (1, 'computing', 1);
+
+-- Insert data into Lecturer table
+INSERT INTO Lecturer (LecturerID, Specialize, LecturerName, UniversityID)
+VALUES (1, 'Computer Science', 'hossam', 1);
+
+-- Insert data into Department table
+INSERT INTO Department (DepartmentID, DepartmentName, CollageID)
+VALUES (1, 'Computer Science Department', 1);
+
+-- Insert data into Course table
+INSERT INTO Course (CourseID, CourseName, CreditsHours, DepartmentID)
+VALUES (1, 'Database Management', 3, 1);
+
+-- Insert data into Student table
+INSERT INTO Student (StudentID, StudentName, Hours, DepartmentID)
+VALUES (1, 'Moaz', 12, 1);
+
+-- Insert data into Student_Course table
+INSERT INTO Student_Course (Degree, CourseID, StudentID)
+VALUES (90, 1, 1);
+
+-- Insert data into Course_Department table
+INSERT INTO Course_Department (CourseDay, StartTime, EndTime, CourseID, LecturerID)
+VALUES ('Monday', '09:00', '12:00', 1, 1);
+
+
+SELECT * FROM University;
+
+SELECT * FROM Collage;
+
+SELECT * FROM Lecturer;
+
+SELECT * FROM Department;
+
+SELECT * FROM Course; 
+
+SELECT * FROM Student;
+
+SELECT * FROM Student_Course;
+
+SELECT * FROM Course_Department;

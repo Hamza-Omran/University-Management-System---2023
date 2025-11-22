@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>University Management System</title>
+</head>
+<body>
+    <header>
+        <h1>University Management System</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Students</a></li>
+            <li><a href="lecturers.html">Lecturers</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="add_courses.html">Add Course to Student</a></li>
+            <li><a href="jss.html">Show Tables</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>lecturers</h2>
+        <div class="add-lecturer">
+            <h3>Add lecturer</h3>
+            <form action="index.php" method="post">
+                <label for="lecturerName">lecturer Name:</label>
+                <input type="text" id="lecturerName" name="lecturerName" required>
+                <label for="lecturerName">Lecturer ID:</label>
+                <input type="text" id="lecturerName" name="lecturerid" required>
+                <label for="lecturerName">University ID:</label>                
+                <input type="text" id="lecturerName" name="universityid" required>
+                <label for="lecturerName">Specialize:</label>
+                <input type="text" id="lecturerName" name="specialize" required>
+                <button type="submit" name="addlecturer">Add</button>
+            </form>
+        </div>
+        <br>
+        <div class="delete-lecturer">
+            <h3>Delete lecturer</h3>
+            <form action="index.php" method="post">
+                <label for="lecturerIDDelete">lecturer ID:</label>
+                <input type="text" id="lecturerIDDelete" name="lecturerIDDelete" required>
+                <button type="submit" name="deletelecturer">Delete</button>
+            </form>
+        </div>
+        <br>
+        
+        <div class="delete-student">
+            <h3>Edit Student</h3>
+            <form action="index.php" method="post">
+                <label for="lecturerName">Lecturer ID:</label>
+                <input type="text" id="lecturerName" name="lecturerid" required>
+                <label for="lecturerName">lecturer Name:</label>
+                <input type="text" id="lecturerName" name="lecturerName" required>
+                <label for="lecturerName">University ID:</label>                
+                <input type="text" id="lecturerName" name="universityid" required>
+                <label for="lecturerName">Specialize:</label>
+                <input type="text" id="lecturerName" name="specialize" required>
+                <button type="submit" name="lectureredit" >Search</button>
+            </form>
+        </div>
+    </section>
+    <br>  
+</body>
+</html>

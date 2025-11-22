@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>University Management System</title>
+</head>
+<body>
+    <header>
+        <h1>University Management System</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Students</a></li>
+            <li><a href="lecturers.html">Lecturers</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="add_courses.html">Add Course to Student</a></li>
+            <li><a href="jss.html">Show Tables</a></li>
+        </ul>
+    </nav>
+
+    <section class="add-courses-section">
+        <h2>Add Courses</h2>
+
+        <div class="add-course-form">
+            <h3>Add Course</h3>
+            <form action="index.php" method="post">
+                <label for="courseID">Course ID:</label>
+                <input type="text" id="courseID" name="courseID" required>
+
+                <label for="studentID">Student ID:</label>
+                <input type="text" id="studentID" name="studentID" required>
+
+                <button type="submit" name="addcourseto">Add</button>
+            </form>
+        </div>
+        <div class="add-course-form">
+            <h3>Delete Course</h3>
+            <form action="index.php" method="post">
+                <label for="courseID">Course ID:</label>
+                <input type="text" id="courseID" name="courseID" required>
+
+                <label for="studentID">Student ID:</label>
+                <input type="text" id="studentID" name="studentID" required>
+
+                <button type="submit" name="deletecoursefrom">Add</button>
+            </form>
+        </div>
+        <div class="add-course-form">
+            <h3>Set Course Degree</h3>
+            <form action="index.php" method="post">
+                <label for="courseID">Course ID:</label>
+                <input type="text" id="courseID" name="courseID" required>
+
+                <label for="studentID">Student ID:</label>
+                <input type="text" id="studentID" name="studentID" required>
+
+                <label for="studentID">Degree:</label>
+                <input type="text" id="studentID" name="degree" required>
+
+                <button type="submit" name="senddegree">Set</button>
+            </form>
+        </div>
+
+       
+    </section>
+
+</body>
+</html>
